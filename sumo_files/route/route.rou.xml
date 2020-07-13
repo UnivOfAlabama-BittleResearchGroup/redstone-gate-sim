@@ -45,5 +45,6 @@
     <route edges="761084003#0 413940709 gate_edge 761083831.29 761083832#0 761083832#0.50 761083832#1-AddedOnRampEdge 761083832#1" color="yellow" id="route_0"/>
     <route edges="761084003#0 automated_gate_edge gneE1.96 761083832#0.50 761083832#1-AddedOnRampEdge 761083832#1" color="yellow" id="route_1"/>
     <flow id="routeFlow_0" begin="0.00" color="yellow" route="route_0" end="3600.00" probability="0.55"/>
-    <flow id="routeFlow_1" begin="0.00" color="red" route="route_1" end="3600.00" probability="0.15"/>
+    <flow id="routeFlow_2" begin="0.00" color="yellow" route="route_1" end="3600.00" probability="0.05"/>
+    <flow id="routeFlow_1" begin="0.00" color="red" route="route_1" end="3600.00" probability="0.10"/>
 </routes>
