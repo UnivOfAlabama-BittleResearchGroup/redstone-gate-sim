@@ -43,6 +43,6 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <route edges="761084003#0 413940709 761083831 761083831.29 761083832#0 761083832#1-AddedOnRampEdge 761083832#1" color="yellow" id="route_0"/>
-    <flow id="flow_0" begin="0.00" from="761084003#0" to="761083832#1" end="3600.00" vehsPerHour="3600.00"/>
+    <route edges="761084003#0 413940709 gate_edge 761083831.29 761083832#0 761083832#1-AddedOnRampEdge 761083832#1" color="yellow" id="route_0"/>
+    <flow id="flow_0" begin="0.00" from="761084003#0" to="761083832#1" end="3600.00" vehsPerHour="3600.00" departLane="free"/>
 </routes>
