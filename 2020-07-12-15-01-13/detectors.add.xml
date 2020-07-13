@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 07/12/20 20:24:35 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\spraychamber\Max\PycharmProjects\CERL\2020-07-12-15-01-13\osm.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\spraychamber\Max\PycharmProjects\CERL\2020-07-12-15-01-13\osm.net.xml"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <netedit>
+        <additional-files value="C:\Users\spraychamber\Max\PycharmProjects\CERL\2020-07-12-15-01-13\detectors.add.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <e2Detector id="detect_0" lane="761083831_0" pos="20.00" length="2.00" freq="1.00" file="e2Detector_761083831_0_0.xml" friendlyPos="1"/>
+    <e2Detector id="detect_1" lane="761083831_1" pos="20.00" length="2.00" freq="1.00" file="e2Detector_761083831_1_1.xml" friendlyPos="1"/>
+    <e2Detector id="detect_2" lane="761083831_2" pos="20.00" length="2.00" freq="1.00" file="e2Detector_761083831_2_2.xml" friendlyPos="1"/>
+    <e2Detector id="detect_3" lane="761083831_3" pos="20.00" length="2.00" freq="1.00" file="e2Detector_761083831_3_3.xml" friendlyPos="1"/>
+    <e2Detector id="detect_4" lane="761083831_4" pos="20.00" length="2.00" freq="1.00" file="e2Detector_761083831_4_4.xml" friendlyPos="1"/>
+    <e2Detector id="detect_5" lane="761083831_5" pos="20.00" length="2.00" freq="1.00" file="e2Detector_761083831_5_5.xml" friendlyPos="1"/>
+    <e2Detector id="detect_6" lane="761083831_6" pos="20.00" length="2.00" freq="1.00" file="e2Detector_761083831_6_6.xml" friendlyPos="1"/>
+    <e2Detector id="detect_7" lane="761083831_7" pos="20.00" length="2.00" freq="1.00" file="e2Detector_761083831_7_7.xml" friendlyPos="1"/>
+</additional>
