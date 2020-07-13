@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 07/13/20 11:16:01 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
+<!-- generated on 07/13/20 11:35:33 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
@@ -295,15 +295,15 @@
         <lane id="gneE1.96_0" index="0" speed="13.89" length="106.90" shape="8.17,2533.47 8.02,2498.08 15.16,2471.98 19.27,2461.33 22.50,2453.03 25.10,2445.97 27.97,2437.17 29.13,2429.91"/>
     </edge>
 
+    <tlLogic id="automated_traffic_light" type="static" programID="0" offset="0">
+        <phase duration="82" state="G"/>
+        <phase duration="3"  state="y"/>
+        <phase duration="5"  state="r"/>
+    </tlLogic>
     <tlLogic id="gate_light" type="static" programID="0" offset="0">
         <phase duration="80" state="GGGGGGGG"/>
         <phase duration="5"  state="yyyyyyyy"/>
         <phase duration="5"  state="rrrrrrrr"/>
-    </tlLogic>
-    <tlLogic id="gneJ12" type="static" programID="0" offset="0">
-        <phase duration="82" state="G"/>
-        <phase duration="3"  state="y"/>
-        <phase duration="5"  state="r"/>
     </tlLogic>
 
     <junction id="372450654" type="priority" x="76.55" y="2618.46" incLanes="611349868.3704_0 413940713.2234_0 413940713.2234_1" intLanes=":372450654_0_0 :372450654_1_0 :372450654_2_0 :372450654_3_0 :372450654_4_0 :372450654_4_1 :372450654_6_0" shape="73.49,2625.79 79.89,2625.66 80.29,2623.44 80.83,2622.66 81.60,2622.11 82.59,2621.77 83.81,2621.66 83.81,2615.26 81.54,2614.82 80.74,2614.26 80.17,2613.48 79.82,2612.48 79.70,2611.26 73.30,2611.31 73.22,2614.17 72.93,2616.16 72.43,2617.29 71.73,2617.55 70.81,2616.95 69.69,2615.47 69.56,2619.04 71.70,2620.47 72.46,2621.49 73.01,2622.72 73.35,2624.15">
@@ -402,7 +402,7 @@
     <connection from="761084003#0" to="automated_gate_edge" fromLane="0" toLane="0" via=":3874192869_0_0" dir="R" state="M"/>
     <connection from="761084003#0" to="413940709" fromLane="0" toLane="0" via=":3874192869_1_0" dir="s" state="M"/>
     <connection from="761084003#0" to="413940709" fromLane="1" toLane="1" via=":3874192869_1_1" dir="s" state="M"/>
-    <connection from="automated_gate_edge" to="gneE1.96" fromLane="0" toLane="0" via=":automated_traffic_light_0_0" tl="gneJ12" linkIndex="0" dir="s" state="O"/>
+    <connection from="automated_gate_edge" to="gneE1.96" fromLane="0" toLane="0" via=":automated_traffic_light_0_0" tl="automated_traffic_light" linkIndex="0" dir="s" state="O"/>
     <connection from="gate_edge" to="761083831.29" fromLane="0" toLane="0" via=":gate_0_0" tl="gate_light" linkIndex="0" dir="s" state="O"/>
     <connection from="gate_edge" to="761083831.29" fromLane="1" toLane="1" via=":gate_0_1" tl="gate_light" linkIndex="1" dir="s" state="O"/>
     <connection from="gate_edge" to="761083831.29" fromLane="2" toLane="2" via=":gate_0_2" tl="gate_light" linkIndex="2" dir="s" state="O"/>

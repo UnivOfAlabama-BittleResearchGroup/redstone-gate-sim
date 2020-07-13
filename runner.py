@@ -40,7 +40,7 @@ def run(detector_ids, sim_step, sim_length, lane_num, traffic_light_id, control_
         vehicle_manager.update_lane_choice()
         detect_list, automated_detect = detector_processor.get_occupancy()
         gate_manager.manage(detector_list=detect_list, sim_time=traci.simulation.getTime())
-        automatic_gate_manager.manage(detector_state=automated_detect, )
+        automatic_gate_manager.manage(detector_state=automated_detect)
 
         # sim step
         traci.simulationStep()

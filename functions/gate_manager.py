@@ -79,11 +79,14 @@ class AutomaticGateManager:
         veh_list = self._traci.edge.getLastStepVehicleIDs(self._gate_edge)
         for veh in veh_list:
             xy = self._traci.vehicle.getPosition(veh)
-            distance.append(((self._gate_pos[0] - xy[0]) ** 2 + (self._gate_pos[1] - xy[1]) ** 2) ** (1 / 2))
-            if distance[-1] < AUTOMATIC_GATE_DETECT_RADIUS:
+            local_distance = ((self._gate_pos[0] - xy[0]) ** 2 + (self._gate_pos[1] - xy[1]) ** 2) ** (1 / 2)
+            if local_distance < AUTOMATIC_GATE_DETECT_RADIUS:
                 verify_veh_list.append(veh)
+                distance.append(local_distance)
         closest_vehicle = [x for _, x in sorted(zip(distance, verify_veh_list), key=lambda pair: pair[0])]
-        return closest_vehicle
+        if len(closest_vehicle) > 0:
+            return closest_vehicle[0]
+        return None
 
     def _verify_vehicle(self, veh_id):
         return veh_id in self._acceptable_ids

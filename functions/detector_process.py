@@ -13,6 +13,6 @@ class DetectorProcess:
             for j, ID in enumerate(id_list):
                 if self.traci.lanearea.getLastStepVehicleNumber(ID) > 0:
                     detect_on_list[i].append(j)
-        if self.traci.lanearea.getLastStepVehicleNumber(self.IDS[-1]) > 0:
+        if self.traci.lanearea.getLastStepVehicleNumber(self.IDS[-1][0]) > 0:
             automated_detect_on = True
         return detect_on_list, automated_detect_on
