@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 07/12/20 20:28:10 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
+<!-- generated on 07/13/20 10:14:06 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <sumo-net-file value="C:\Users\spraychamber\Max\PycharmProjects\CERL\2020-07-12-15-01-13\osm.net.xml"/>
+        <sumo-net-file value="C:\Users\spraychamber\Max\PycharmProjects\redstone-gate-sim\sumo_files\net\osm.net.xml"/>
     </input>
 
     <output>
-        <output-file value="C:\Users\spraychamber\Max\PycharmProjects\CERL\2020-07-12-15-01-13\osm.net.xml"/>
+        <output-file value="C:\Users\spraychamber\Max\PycharmProjects\redstone-gate-sim\sumo_files\net\osm.net.xml"/>
         <output.street-names value="true"/>
     </output>
 
@@ -31,8 +31,7 @@
     </pedestrian>
 
     <netedit>
-        <additional-files value="C:\Users\spraychamber\Max\PycharmProjects\CERL\2020-07-12-15-01-13\detectors.add.xml"/>
-        <route-files value="C:\Users\spraychamber\Max\PycharmProjects\CERL\2020-07-12-15-01-13\route.rou.xml"/>
+        <route-files value="C:\Users\spraychamber\Max\PycharmProjects\redstone-gate-sim\sumo_files\route\route.rou.xml"/>
     </netedit>
 
     <report>
@@ -43,6 +42,8 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <route edges="761084003#0 413940709 gate_edge 761083831.29 761083832#0 761083832#1-AddedOnRampEdge 761083832#1" color="yellow" id="route_0"/>
-    <flow id="flow_0" begin="0.00" from="761084003#0" to="761083832#1" end="3600.00" vehsPerHour="3600.00" departLane="free"/>
+    <route edges="761084003#0 413940709 gate_edge 761083831.29 761083832#0 761083832#0.50 761083832#1-AddedOnRampEdge 761083832#1" color="yellow" id="route_0"/>
+    <route edges="761084003#0 gneE1 gneE1.96 761083832#0.50 761083832#1-AddedOnRampEdge 761083832#1" color="yellow" id="route_1"/>
+    <flow id="routeFlow_0" begin="0.00" color="yellow" route="route_0" end="3600.00" probability="0.95"/>
+    <flow id="routeFlow_1" begin="0.00" color="red" route="route_1" end="3600.00" probability="0.05"/>
 </routes>
