@@ -1,3 +1,3 @@
 from functions.detector_process import DetectorProcess
-from functions.gate_manager import GateManager
+from functions.gate_manager import GateManager, AutomaticGateManager
 from functions.vehicle_manager import VehicleManager
