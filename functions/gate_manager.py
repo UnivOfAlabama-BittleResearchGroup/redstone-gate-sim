@@ -16,15 +16,13 @@ def get_process_time():
 
 class GateManager:
 
-    def __init__(self, lane_num, traci, traffic_light_id, automated_tl_id):
+    def __init__(self, lane_num, traci, traffic_light_id, ):
         self._traci = traci
         self._traffic_light_id = traffic_light_id
         self._default_list = [CLOSE] * lane_num
         self._gate_states = [CLOSE] * lane_num
         self._gate_times = [0] * lane_num
         self._process_time = [get_process_time() for i in range(lane_num)]
-        self._automated_tl_id = automated_tl_id
-        self._automated_tl_id_pos =
 
     def _handle_detector_info(self, detector_list, sim_time):
         if len(detector_list[0]) > 0:
@@ -57,13 +55,10 @@ class GateManager:
         light_string = "".join(light_list)
         self._traci.trafficlight.setRedYellowGreenState(self._traffic_light_id, light_string)
 
-    def _automated
 
     def manage(self, detector_list, sim_time):
         self._handle_detector_info(detector_list=detector_list, sim_time=sim_time)
         self._check_to_open(current_time=sim_time)
         self._check_to_close(detector_list=detector_list, current_time=sim_time)
         self._write_to_traffic_light()
-        
 
-Class
