@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 07/13/20 11:20:12 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
+<!-- generated on 07/13/20 15:19:07 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
@@ -42,7 +42,8 @@
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
-    <e2Detector id="automated_gate_detect" lane="gneE1.96_0" pos="2.00" length="2.00" freq="900.00" file="e2Detector_gneE1.96_0_16.xml"/>
+    <e2Detector id="automated_gate_detect" lane="gneE1.96_0" pos="0.00" length="2.00" freq="900.00" file="e2Detector_gneE1.96_0_16.xml"/>
+    <e2Detector id="automated_gate_reject_detect" lane="exit_edge_-1_0" pos="2.00" length="2.00" freq="900.00" file="e2Detector_exit_edge_0_17.xml"/>
     <e2Detector id="detect_0" lane="gate_edge_0" pos="20.00" length="2.00" freq="1.00" file="e2Detector_gate_edge_0_0.xml" friendlyPos="1"/>
     <e2Detector id="detect_1" lane="gate_edge_1" pos="20.00" length="2.00" freq="1.00" file="e2Detector_gate_edge_1_1.xml" friendlyPos="1"/>
     <e2Detector id="detect_2" lane="gate_edge_2" pos="20.00" length="2.00" freq="1.00" file="e2Detector_gate_edge_2_2.xml" friendlyPos="1"/>

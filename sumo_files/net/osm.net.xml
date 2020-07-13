@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 07/13/20 11:35:33 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
+<!-- generated on 07/13/20 15:19:06 by Eclipse SUMO netedit Version v1_6_0+0521-bad558c3e9
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
@@ -30,6 +30,10 @@
         <walkingareas value="false"/>
     </pedestrian>
 
+    <netedit>
+        <additional-files value="C:\Users\spraychamber\Max\PycharmProjects\redstone-gate-sim\sumo_files\detectors\detectors.add.xml"/>
+    </netedit>
+
     <report>
         <aggregate-warnings value="5"/>
     </report>
@@ -39,7 +43,7 @@
 
 <net version="1.6" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
 
-    <location netOffset="-530010.14,-3835736.17" convBoundary="0.00,0.00,3447.60,3920.13" origBoundary="-86.672465,34.663138,-86.634683,34.698594" projParameter="+proj=utm +zone=16 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+    <location netOffset="-530010.14,-3835736.17" convBoundary="-31.93,0.00,3447.60,3920.13" origBoundary="-86.672465,34.663138,-86.634683,34.698594" projParameter="+proj=utm +zone=16 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
 
     <type id="highway.bridleway" priority="1" numLanes="1" speed="2.78" allow="pedestrian" oneway="1" width="2.00"/>
     <type id="highway.bus_guideway" priority="1" numLanes="1" speed="27.78" allow="bus" oneway="1"/>
@@ -134,7 +138,10 @@
         <lane id=":761083832#1-AddedOnRampNode_0_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.35" length="8.27" shape="48.97,2276.32 49.64,2268.35"/>
     </edge>
     <edge id=":automated_traffic_light_0" function="internal">
-        <lane id=":automated_traffic_light_0_0" index="0" speed="13.89" length="3.10" shape="8.18,2536.57 8.17,2533.47"/>
+        <lane id=":automated_traffic_light_0_0" index="0" speed="6.75" length="8.48" shape="8.72,2544.45 8.25,2542.37 7.15,2540.80 5.43,2539.74 3.08,2539.19"/>
+    </edge>
+    <edge id=":automated_traffic_light_1" function="internal">
+        <lane id=":automated_traffic_light_1_0" index="0" speed="13.89" length="11.33" shape="8.72,2544.45 8.16,2533.13"/>
     </edge>
     <edge id=":gate_0" function="internal">
         <lane id=":gate_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="4.50" length="2.02" shape="26.16,2538.08 25.99,2535.99"/>
@@ -152,6 +159,9 @@
     <edge id=":gneJ10_1" function="internal">
         <lane id=":gneJ10_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.35" length="28.77" shape="34.29,2421.70 34.39,2392.93"/>
         <lane id=":gneJ10_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.35" length="28.77" shape="37.49,2421.71 37.59,2392.94"/>
+    </edge>
+    <edge id=":gneJ13_0" function="internal">
+        <lane id=":gneJ13_0_0" index="0" speed="13.89" length="0.38" shape="-30.06,2573.08 -30.06,2573.20 -30.05,2573.27 -30.03,2573.35 -30.00,2573.46"/>
     </edge>
 
     <edge id="-611349868" from="372450654" to="gneJ3" name="Goss Road Southwest" priority="10" type="highway.tertiary" shape="76.55,2618.46 111.04,2618.47 128.72,2620.57 144.53,2625.24 161.63,2635.87 175.36,2649.07 185.74,2665.61 191.27,2681.37 193.82,2698.99 193.40,2713.26 190.57,2725.12 186.61,2736.90 180.44,2748.25 167.16,2766.56 146.21,2795.59 131.39,2828.17 124.99,2850.20 122.51,2868.00 121.82,2888.77 123.71,3062.08 124.31,3104.58 129.38,3461.11">
@@ -262,8 +272,14 @@
             <param key="origId" value="761084003"/>
         </lane>
     </edge>
-    <edge id="automated_gate_edge" from="3874192869" to="automated_traffic_light" priority="-1" shape="34.49,2617.74 29.79,2602.21 23.54,2585.06 16.71,2569.71 11.16,2556.71 9.78,2536.46">
-        <lane id="automated_gate_edge_0" index="0" speed="13.89" length="84.41" shape="32.48,2616.61 28.27,2602.72 22.06,2585.66 15.24,2570.35 9.58,2557.09 8.18,2536.57"/>
+    <edge id="automated_gate_edge" from="3874192869" to="automated_traffic_light" priority="-1" shape="34.49,2617.74 29.79,2602.21 23.54,2585.06 16.71,2569.71 11.16,2556.71 10.09,2541.06">
+        <lane id="automated_gate_edge_0" index="0" speed="13.89" length="76.51" shape="32.48,2616.61 28.27,2602.72 22.06,2585.66 15.24,2570.35 9.58,2557.09 8.72,2544.45"/>
+    </edge>
+    <edge id="exit_edge" from="gneJ13" to="gneJ14" priority="-1">
+        <lane id="exit_edge_0" index="0" speed="13.89" length="13.23" shape="-30.00,2573.46 -26.51,2586.22"/>
+    </edge>
+    <edge id="exit_edge_-1" from="automated_traffic_light" to="gneJ13" priority="-1" shape="6.59,2537.97 -2.53,2536.97 -10.27,2538.49 -21.48,2542.56 -28.94,2554.18 -31.93,2563.63 -31.65,2573.51">
+        <lane id="exit_edge_-1_0" index="0" speed="13.89" length="56.07" shape="3.08,2539.19 -2.46,2538.59 -9.84,2540.04 -20.43,2543.88 -27.48,2554.87 -30.32,2563.85 -30.06,2573.08"/>
     </edge>
     <edge id="gate_edge" from="7110766791" to="gate" name="Rideout Road" priority="10" type="highway.tertiary" spreadType="center" shape="37.81,2562.77 37.36,2537.88">
         <lane id="gate_edge_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="4.50" length="24.89" shape="26.61,2562.97 26.16,2538.08">
@@ -291,14 +307,14 @@
             <param key="origId" value="761083831"/>
         </lane>
     </edge>
-    <edge id="gneE1.96" from="automated_traffic_light" to="gneJ10" priority="-1" shape="9.78,2536.46 9.62,2498.29 16.68,2472.48 20.76,2461.91 24.00,2453.60 26.61,2446.49 29.53,2437.55 30.71,2430.16">
-        <lane id="gneE1.96_0" index="0" speed="13.89" length="106.90" shape="8.17,2533.47 8.02,2498.08 15.16,2471.98 19.27,2461.33 22.50,2453.03 25.10,2445.97 27.97,2437.17 29.13,2429.91"/>
+    <edge id="gneE1.96" from="automated_traffic_light" to="gneJ10" priority="-1" shape="9.78,2537.34 9.62,2498.29 16.68,2472.48 20.76,2461.91 24.00,2453.60 26.61,2446.49 29.53,2437.55 30.71,2430.16">
+        <lane id="gneE1.96_0" index="0" speed="13.89" length="106.57" shape="8.16,2533.13 8.02,2498.08 15.16,2471.98 19.27,2461.33 22.50,2453.03 25.10,2445.97 27.97,2437.17 29.13,2429.91"/>
     </edge>
 
     <tlLogic id="automated_traffic_light" type="static" programID="0" offset="0">
-        <phase duration="82" state="G"/>
-        <phase duration="3"  state="y"/>
-        <phase duration="5"  state="r"/>
+        <phase duration="82" state="GG"/>
+        <phase duration="3"  state="yy"/>
+        <phase duration="5"  state="rr"/>
     </tlLogic>
     <tlLogic id="gate_light" type="static" programID="0" offset="0">
         <phase duration="80" state="GGGGGGGG"/>
@@ -345,8 +361,9 @@
         <request index="1" response="001" foes="001" cont="0"/>
         <request index="2" response="000" foes="000" cont="0"/>
     </junction>
-    <junction id="automated_traffic_light" type="traffic_light" x="9.78" y="2536.46" incLanes="automated_gate_edge_0" intLanes=":automated_traffic_light_0_0" shape="6.59,2536.68 9.78,2536.46 9.77,2533.46 6.57,2533.47">
-        <request index="0" response="0" foes="0" cont="0"/>
+    <junction id="automated_traffic_light" type="traffic_light" x="9.78" y="2536.46" incLanes="automated_gate_edge_0" intLanes=":automated_traffic_light_0_0 :automated_traffic_light_1_0" shape="7.12,2544.56 10.31,2544.34 9.76,2533.13 6.56,2533.14 6.20,2535.78 5.75,2536.67 5.10,2537.27 4.27,2537.58 3.26,2537.60 2.91,2540.79 5.15,2541.40 5.95,2541.95 6.55,2542.66 6.94,2543.53">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
     </junction>
     <junction id="gate" type="traffic_light" x="37.29" y="2537.33" incLanes="gate_edge_0 gate_edge_1 gate_edge_2 gate_edge_3 gate_edge_4 gate_edge_5 gate_edge_6 gate_edge_7" intLanes=":gate_0_0 :gate_0_1 :gate_0_2 :gate_0_3 :gate_0_4 :gate_0_5 :gate_0_6 :gate_0_7" shape="24.56,2538.11 50.16,2537.65 49.99,2535.73 24.39,2536.01">
         <request index="0" response="00000000" foes="00000000" cont="0"/>
@@ -365,6 +382,10 @@
         <request index="1" response="001" foes="001" cont="0"/>
         <request index="2" response="000" foes="000" cont="0"/>
     </junction>
+    <junction id="gneJ13" type="priority" x="-31.65" y="2573.51" incLanes="exit_edge_-1_0" intLanes=":gneJ13_0_0" shape="-31.55,2573.88 -28.46,2573.04 -31.66,2573.13 -31.65,2573.41 -31.64,2573.51 -31.62,2573.61 -31.59,2573.72">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="gneJ14" type="dead_end" x="-28.05" y="2586.64" incLanes="exit_edge_0" intLanes="" shape="-24.97,2585.80 -28.05,2586.64"/>
     <junction id="gneJ2" type="dead_end" x="129.44" y="3465.07" incLanes="" intLanes="" shape="129.44,3465.07 126.24,3465.12"/>
     <junction id="gneJ3" type="dead_end" x="129.38" y="3461.11" incLanes="-611349868_0" intLanes="" shape="132.58,3461.06 129.38,3461.11"/>
 
@@ -402,7 +423,9 @@
     <connection from="761084003#0" to="automated_gate_edge" fromLane="0" toLane="0" via=":3874192869_0_0" dir="R" state="M"/>
     <connection from="761084003#0" to="413940709" fromLane="0" toLane="0" via=":3874192869_1_0" dir="s" state="M"/>
     <connection from="761084003#0" to="413940709" fromLane="1" toLane="1" via=":3874192869_1_1" dir="s" state="M"/>
-    <connection from="automated_gate_edge" to="gneE1.96" fromLane="0" toLane="0" via=":automated_traffic_light_0_0" tl="automated_traffic_light" linkIndex="0" dir="s" state="O"/>
+    <connection from="automated_gate_edge" to="exit_edge_-1" fromLane="0" toLane="0" via=":automated_traffic_light_0_0" tl="automated_traffic_light" linkIndex="0" dir="r" state="O"/>
+    <connection from="automated_gate_edge" to="gneE1.96" fromLane="0" toLane="0" via=":automated_traffic_light_1_0" tl="automated_traffic_light" linkIndex="1" dir="s" state="O"/>
+    <connection from="exit_edge_-1" to="exit_edge" fromLane="0" toLane="0" via=":gneJ13_0_0" dir="s" state="M"/>
     <connection from="gate_edge" to="761083831.29" fromLane="0" toLane="0" via=":gate_0_0" tl="gate_light" linkIndex="0" dir="s" state="O"/>
     <connection from="gate_edge" to="761083831.29" fromLane="1" toLane="1" via=":gate_0_1" tl="gate_light" linkIndex="1" dir="s" state="O"/>
     <connection from="gate_edge" to="761083831.29" fromLane="2" toLane="2" via=":gate_0_2" tl="gate_light" linkIndex="2" dir="s" state="O"/>
@@ -445,7 +468,8 @@
     <connection from=":761083832#1-AddedOnRampNode_0" to="761083832#1" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":761083832#1-AddedOnRampNode_0" to="761083832#1" fromLane="1" toLane="0" dir="s" state="M"/>
     <connection from=":761083832#1-AddedOnRampNode_0" to="761083832#1" fromLane="2" toLane="1" dir="s" state="M"/>
-    <connection from=":automated_traffic_light_0" to="gneE1.96" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":automated_traffic_light_0" to="exit_edge_-1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":automated_traffic_light_1" to="gneE1.96" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":gate_0" to="761083831.29" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":gate_0" to="761083831.29" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":gate_0" to="761083831.29" fromLane="2" toLane="2" dir="s" state="M"/>
@@ -457,5 +481,6 @@
     <connection from=":gneJ10_0" to="761083832#0.50" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":gneJ10_1" to="761083832#0.50" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":gneJ10_1" to="761083832#0.50" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":gneJ13_0" to="exit_edge" fromLane="0" toLane="0" dir="s" state="M"/>
 
 </net>

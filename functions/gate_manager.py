@@ -4,8 +4,8 @@ OPEN = 'G'
 CLOSE = 'r'
 WAITING = 'w'
 
-AVG_TIME = 15
-STD_TIME = 5
+AVG_TIME = 20
+STD_TIME = 10
 MIN_TIME = 5
 
 CONSTANT_OPEN_TIME = 4
@@ -72,6 +72,7 @@ class AutomaticGateManager:
         self._gate_edge = gate_edge
         self._acceptable_ids = acceptable_ids
         self._allowed_vehicles = []
+        self._rejected_veh = None
 
     def _check_for_vehicles(self):
         verify_veh_list = []
@@ -91,11 +92,11 @@ class AutomaticGateManager:
     def _verify_vehicle(self, veh_id):
         return veh_id in self._acceptable_ids
 
-    def _set_gate_state(self, ok):
-        if ok:
-            self._traci.trafficlight.setRedYellowGreenState(self._tl_id, OPEN)
-        else:
-            self._traci.trafficlight.setRedYellowGreenState(self._tl_id, CLOSE)
+    def _set_gate_state(self, ok, reject=False):
+        write_list = ['', '']
+        write_list[1] = OPEN if ok else CLOSE
+        write_list[0] = OPEN if reject else CLOSE
+        self._traci.trafficlight.setRedYellowGreenState(self._tl_id, "".join(write_list))
 
     @staticmethod
     def _passed_vehicles(detector_state):
@@ -103,13 +104,22 @@ class AutomaticGateManager:
 
     def manage(self, detector_state):
         ok = False
-        veh = self._check_for_vehicles()
-        if veh:
-            ok = self._verify_vehicle(veh_id=veh)
-            if ok:
-                self._allowed_vehicles.append(veh)
-                # self._allowed_vehicles_time.append(sim_time)
-        if self._passed_vehicles(detector_state):
-            ok = False
-        # self._passed_vehicles()
-        self._set_gate_state(ok=ok)
+        if not self._rejected_veh:
+            veh = self._check_for_vehicles()
+            if veh:
+                ok = self._verify_vehicle(veh_id=veh)
+                if ok:
+                    self._allowed_vehicles.append(veh)
+                    # self._allowed_vehicles_time.append(sim_time)
+                else:
+                    self._rejected_veh = veh
+            if self._passed_vehicles(detector_state)[0]:
+                ok = False
+            # self._passed_vehicles()
+            self._set_gate_state(ok=ok)
+        else:
+            if not self._passed_vehicles(detector_state)[1]:
+                self._set_gate_state(ok=False, reject=True)
+            else:
+                self._rejected_veh = None
+        return self._rejected_veh

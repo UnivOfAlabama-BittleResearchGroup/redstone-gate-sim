@@ -4,11 +4,12 @@ LANE_CHANGE_DURATION = 300
 
 class VehicleManager:
 
-    def __init__(self, control_edge, traci, lane_num):
+    def __init__(self, control_edge, traci, lane_num, rejected_edge):
         self._control_edge = control_edge
         self._traci = traci
         self._lane_num = lane_num
         self._vehicle_list_last = []
+        self._rejected_edge = rejected_edge
 
     def _get_vehicle_list(self,):
         update_vehicle_list = []
@@ -46,3 +47,9 @@ class VehicleManager:
             lane_vehicle_num = self._get_lane_occupancy()
             lane_list = self._decide_lane(lane_vehicle_num=lane_vehicle_num, update_veh_list=update_vehicle_list)
             self._impose_lane(update_veh_list=update_vehicle_list, lane_list=lane_list)
+
+    def reroute_rejected(self, vehicle_id):
+        try:
+            self._traci.vehicle.changeTarget(vehicle_id, self._rejected_edge)
+        except self._traci.exceptions.TraCIException:
+            return None
