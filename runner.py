@@ -24,8 +24,8 @@ CONTROL_EDGE = 'gate_edge'
 AUTOMATED_GATE_EDGE = 'automated_gate_edge'
 AUTOMATED_TL_ID = 'automated_traffic_light'
 EXIT_EDGE = 'exit_edge'
-ACCEPTABLE_IDS = ["".join(['routeFlow_1.', str(random.randint(0, 200))]) for i in range(180)]
-
+# ACCEPTABLE_IDS = ["".join(['routeFlow_1.', str(random.randint(0, 200))]) for i in range(180)]
+ACCEPTABLE_IDS = ["".join(['routeFlow_1.', str(i)]) for i in range(180)]
 
 def run(detector_ids, sim_step, sim_length, lane_num, traffic_light_id, control_edge, automated_gate_edge,
         automated_tl_id, acceptable_ids, rejected_edge):

@@ -8,7 +8,7 @@ AVG_TIME = 20
 STD_TIME = 10
 MIN_TIME = 5
 
-CONSTANT_OPEN_TIME = 4
+CONSTANT_OPEN_TIME = 2
 AUTOMATIC_GATE_DETECT_RADIUS = 30  # meters
 
 
@@ -63,6 +63,7 @@ class GateManager:
         self._write_to_traffic_light()
 
 
+# 
 class AutomaticGateManager:
     def __init__(self, automated_tl_id, traci, gate_edge, acceptable_ids):
         self._traci = traci
