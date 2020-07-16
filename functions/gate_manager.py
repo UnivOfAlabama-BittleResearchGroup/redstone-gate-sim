@@ -63,7 +63,7 @@ class GateManager:
         self._write_to_traffic_light()
 
 
-# 
+# Need to add a time limit
 class AutomaticGateManager:
     def __init__(self, automated_tl_id, traci, gate_edge, acceptable_ids):
         self._traci = traci
